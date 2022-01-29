@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Guess the number!
+Comment=A simple number guessing game
+GenericName=Guess the number!
+Exec=com.github.alexkdeveloper.guessnumber %U
+Icon=com.github.alexkdeveloper.guessnumber
+Terminal=false
+Categories=Game;GTK;;
+Keywords=numbers;guess;
