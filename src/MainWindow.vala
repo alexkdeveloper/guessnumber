@@ -35,7 +35,7 @@ namespace Guessnumber {
       construct {
       var css_provider = new CssProvider();
       try {
-               css_provider.load_from_data(".trying_over {color: red} .guessed {color: green; font-size: 18px} .not_guessed{color: red; font-size: 18px}");
+               css_provider.load_from_data(".trying_over {color: red} .guessed {color: green; font-size: 18px} .not_guessed {color: red; font-size: 18px}");
                Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
            } catch (Error e) {
                error ("Cannot load CSS stylesheet: %s", e.message);
