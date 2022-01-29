@@ -153,7 +153,7 @@ namespace Guessnumber {
           reset_game();
           return;
       }
-      var dialog_back = new Granite.MessageDialog.with_image_from_icon_name ("Question", "Come back? The game will be reset.", "dialog-question", Gtk.ButtonsType.NONE);
+      var dialog_back = new Granite.MessageDialog.with_image_from_icon_name ("Question", "Come back?\nThe game will be reset.", "dialog-question", Gtk.ButtonsType.NONE);
            dialog_back.add_button ("Cancel", 0);
            dialog_back.add_button ("Come back", 1);
            dialog_back.show_all ();
