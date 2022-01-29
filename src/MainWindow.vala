@@ -46,8 +46,9 @@ namespace Guessnumber {
         headerbar.show_close_button = true;
         set_titlebar(headerbar);
         button_back = new Button ();
-        button_back.set_image (new Image.from_icon_name ("go-previous", IconSize.SMALL_TOOLBAR));
-        button_back.set_tooltip_text("Back");
+        button_back.get_style_context().add_class("back-button");
+        button_back.label = "Back";
+        button_back.set_tooltip_text("To the start page");
         headerbar.add(button_back);
         button_back.clicked.connect (go_to_back);
 
@@ -154,7 +155,7 @@ namespace Guessnumber {
       }
       var dialog_back = new Granite.MessageDialog.with_image_from_icon_name ("Question", "Come back? The game will be reset.", "dialog-question", Gtk.ButtonsType.NONE);
            dialog_back.add_button ("Cancel", 0);
-           dialog_back.add_button ("Return", 1);
+           dialog_back.add_button ("Come back", 1);
            dialog_back.show_all ();
            int res = dialog_back.run ();
            switch (res) {
