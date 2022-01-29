@@ -23,7 +23,7 @@
   ],
   "modules": [
      {
-        "name": "Guess the number!",
+        "name": "guessnumber",
         "buildsystem": "meson",
         "sources": [
             {
