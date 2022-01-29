@@ -46,9 +46,7 @@ namespace Guessnumber {
         headerbar.show_close_button = true;
         set_titlebar(headerbar);
         button_back = new Button ();
-        button_back.get_style_context().add_class("back-button");
-        button_back.label = "Back";
-        // button_back.set_image (new Image.from_icon_name ("go-previous", IconSize.SMALL_TOOLBAR));
+        button_back.set_image (new Image.from_icon_name ("go-previous", IconSize.SMALL_TOOLBAR));
         button_back.set_tooltip_text("Back");
         headerbar.add(button_back);
         button_back.clicked.connect (go_to_back);
