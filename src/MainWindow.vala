@@ -94,6 +94,7 @@ namespace Guessnumber {
         vbox_start_game.pack_start(button_start_game,false,true,0);
         stack.add(vbox_start_game);
         label_info = new Label ("");
+        label_info.set_line_wrap(true);
         entry_user_number = new Entry();
         entry_user_number.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "edit-clear-symbolic");
         entry_user_number.icon_press.connect ((pos, event) => {
@@ -111,6 +112,7 @@ namespace Guessnumber {
 
         attempts = new Label("");
         numbers = new Label("");
+        numbers.set_line_wrap(true);
         result = new Label("");
 
         vbox_game = new Box(Orientation.VERTICAL,20);
