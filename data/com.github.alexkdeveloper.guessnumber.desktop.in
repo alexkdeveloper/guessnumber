@@ -6,5 +6,5 @@ GenericName=Guess the number!
 Exec=com.github.alexkdeveloper.guessnumber %U
 Icon=com.github.alexkdeveloper.guessnumber
 Terminal=false
-Categories=Game;GTK;;
+Categories=Game;GTK;
 Keywords=numbers;guess;
