@@ -143,6 +143,16 @@ namespace Guessnumber {
        }
        int diapasone = int.parse(entry_diapasone.get_text());
        attempt_number = int.parse(entry_attempts.get_text());
+       if(diapasone < 2){
+           alert("The maximum number cannot be less than 2");
+           entry_diapasone.grab_focus();
+           return;
+       }
+       if(attempt_number < 1){
+           alert("The number of attempts cannot be less than 1");
+           entry_attempts.grab_focus();
+           return;
+       }
         guess_number = Random.int_range(1,diapasone + 1);
         label_info.set_text("Guessed number from 1 to "+diapasone.to_string()+". Guess it in "+attempt_number.to_string()+" tries.");
         stack.visible_child = vbox_game;
