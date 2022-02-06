@@ -16,10 +16,10 @@ namespace Guessnumber {
    private Label result;
    private Button button_back;
    private Button button_check;
-   string user_numbers="";
-   int attempt_number;
-   int guess_number;
-   int attempt_count=0;
+   private string user_numbers="";
+   private int attempt_number;
+   private int guess_number;
+   private int attempt_count=0;
 
 
         public MainWindow(Gtk.Application application) {
@@ -126,6 +126,7 @@ namespace Guessnumber {
         stack.visible_child = vbox_start_game;
         entry_diapasone.set_text("100");
         entry_attempts.set_text("7");
+        add_shortcuts();
         }
 
 
@@ -225,6 +226,32 @@ namespace Guessnumber {
        }
    }
 
+   private void add_shortcuts () {
+    key_press_event.connect ((e) => {
+        switch (e.keyval) {
+            case Gdk.Key.space:
+            case Gdk.Key.KP_Enter:
+                if (e.state != 0) {
+                    if (stack.get_visible_child()==vbox_start_game){
+                        start_game();
+                    }else{
+                        check_number();
+                    }
+                }
+                break;
+            case Gdk.Key.Left:
+            case Gdk.Key.Home:
+                 if(e.state != 0){
+                    if(stack.get_visible_child()==vbox_game){
+                       go_to_back();
+                    }
+               }
+               break;
+        }
+        return false;
+    });
+}
+     
      private void set_widget_visible (Gtk.Widget widget, bool visible) {
          widget.no_show_all = !visible;
          widget.visible = visible;
