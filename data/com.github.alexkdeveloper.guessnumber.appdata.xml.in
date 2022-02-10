@@ -23,6 +23,9 @@
     <screenshot type="default">
     <image>https://raw.githubusercontent.com/alexkdeveloper/guessnumber/main/data/screenshots/screenshot2.png</image>
     </screenshot>
+    <screenshot type="default">
+    <image>https://raw.githubusercontent.com/alexkdeveloper/guessnumber/main/data/screenshots/screenshot3.png</image>
+    </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
@@ -54,6 +57,11 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
+    <release version="1.1.0" date="2022-02-15">
+       <description>
+            <p>Added a game where the program tries to guess the number</p>
+        </description>
+    </release>
     <release version="1.0.1" date="2022-02-08">
        <description>
             <p>Added keyboard shortcuts (space, KP_Enter, Left and Home)</p>
