@@ -215,7 +215,7 @@ namespace Guessnumber {
    }
 
    private void go_to_back(){
-      if(!button_check.get_sensitive()||!button_guessed.get_sensitive()){
+      if(!button_check.get_sensitive()&&stack.get_visible_child()==vbox_game_1||!button_guessed.get_sensitive()&&stack.get_visible_child()==vbox_game_2){
           reset_game();
           return;
       }
