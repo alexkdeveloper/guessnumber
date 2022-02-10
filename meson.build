@@ -2,7 +2,7 @@
 project (
     'com.github.alexkdeveloper.guessnumber',
     'vala', 'c',
-    version: '1.0.1'
+    version: '1.1.0'
 )
 
 # Translation module
