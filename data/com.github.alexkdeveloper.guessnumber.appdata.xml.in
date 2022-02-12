@@ -59,14 +59,12 @@
   <releases>
     <release version="1.1.0" date="2022-02-12">
        <description>
-            <p>Added a game where the program tries to guess the number</p>
+            <ul>
+              <li>Added a game where the program tries to guess the number</li>
+              <li>Added keyboard shortcuts (space, KP_Enter, Left and Home)</li>
+            </ul>
         </description>
-    </release>
-    <release version="1.0.1" date="2022-02-08">
-       <description>
-            <p>Added keyboard shortcuts (space, KP_Enter, Left and Home)</p>
-        </description>
-    </release>
+      </release>
     <release version="1.0.0" date="2022-01-30">
         <description>
             <p>Initial release</p>
