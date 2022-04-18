@@ -45,14 +45,14 @@ namespace Guessnumber {
       construct {
       var css_provider = new CssProvider();
       try {
-               css_provider.load_from_data(".trying_over {color: red} .guessed {color: green; font-size: 18px} .not_guessed {color: red; font-size: 18px} .show_number {font-weight: bold; font-size: 20px} .no {background-color: red; color: white} .yes {background-color: green; color: white}");
+               css_provider.load_from_data(".trying_over {color: red} .guessed {color: green; font-size: 18px} .not_guessed {color: red; font-size: 18px} .show_number {font-weight: bold; font-size: 20px}");
                Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
            } catch (Error e) {
                error ("Cannot load CSS stylesheet: %s", e.message);
        }
        get_style_context().add_class("rounded");
        HeaderBar headerbar = new HeaderBar();
-        headerbar.get_style_context().add_class(STYLE_CLASS_FLAT);
+        headerbar.get_style_context().add_class("flat");
         headerbar.show_close_button = true;
         set_titlebar(headerbar);
         button_back = new Button ();
@@ -142,13 +142,13 @@ namespace Guessnumber {
         number.get_style_context().add_class("show_number");
         attempt = new Label("");
         button_greater = new Button.with_label("My number is greater");
-        button_greater.get_style_context().add_class("no");
+        button_greater.get_style_context().add_class("destructive-action");
         button_greater.clicked.connect(greater);
         button_less = new Button.with_label("My number is less");
-        button_less.get_style_context().add_class("no");
+        button_less.get_style_context().add_class("destructive-action");
         button_less.clicked.connect(less);
         button_guessed = new Button.with_label("Guessed!");
-        button_guessed.get_style_context().add_class("yes");
+        button_guessed.get_style_context().add_class("suggested-action");
         button_guessed.clicked.connect(guessed);
         vbox_game_2 = new Box(Orientation.VERTICAL,20);
         vbox_game_2.pack_start(info,false,true,0);
