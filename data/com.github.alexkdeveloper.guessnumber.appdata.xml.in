@@ -18,12 +18,15 @@
   <url type="help">http://github.com/alexkdeveloper/guessnumber/issues</url>
   <screenshots>
     <screenshot type="default">
+    <caption>Game Selection</caption>
     <image>https://raw.githubusercontent.com/alexkdeveloper/guessnumber/main/data/screenshots/screenshot1.png</image>
     </screenshot>
     <screenshot type="default">
+    <caption>You guess the number</caption>
     <image>https://raw.githubusercontent.com/alexkdeveloper/guessnumber/main/data/screenshots/screenshot2.png</image>
     </screenshot>
     <screenshot type="default">
+    <caption>The program guesses the number</caption>
     <image>https://raw.githubusercontent.com/alexkdeveloper/guessnumber/main/data/screenshots/screenshot3.png</image>
     </screenshot>
   </screenshots>
