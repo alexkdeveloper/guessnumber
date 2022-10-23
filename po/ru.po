@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2022-10-23 18:55+0800\n"
+"PO-Revision-Date: 2022-10-23 18:55+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.2\n"
+"X-Poedit-Basepath: ../src\n"
+"X-Poedit-SearchPath-0: MainWindow.vala\n"
+
+#: MainWindow.vala:60
+msgid "Back"
+msgstr "Назад"
+
+#: MainWindow.vala:61
+msgid "To the start page"
+msgstr "На стартовую страницу"
+
+#: MainWindow.vala:71
+msgid "Welcome to the game!"
+msgstr "Добро пожаловать в игру!"
+
+#: MainWindow.vala:80
+msgid "_Numbers from 1 to"
+msgstr "_Числа от 1 до"
+
+#: MainWindow.vala:92
+msgid "_Number of attempts:"
+msgstr "_Количество попыток:"
+
+#: MainWindow.vala:97
+msgid "You guess"
+msgstr "Вы угадываете"
+
+#: MainWindow.vala:99
+msgid "The program guesses"
+msgstr "Программа угадывает"
+
+#: MainWindow.vala:118
+msgid "_Your number:"
+msgstr "_Ваше число:"
+
+#: MainWindow.vala:123
+msgid "CHECK"
+msgstr "ПРОВЕРИТЬ"
+
+#: MainWindow.vala:144
+msgid "My number is greater"
+msgstr "Мое число больше"
+
+#: MainWindow.vala:147
+msgid "My number is less"
+msgstr "Мое число меньше"
+
+#: MainWindow.vala:150 MainWindow.vala:284
+msgid "Guessed!"
+msgstr "Угадано!"
+
+#: MainWindow.vala:171
+msgid "Enter the maximum number of guesses"
+msgstr "Введите максимальное число"
+
+#: MainWindow.vala:176
+msgid "Enter the number of attempts"
+msgstr "Введите количество попыток"
+
+#: MainWindow.vala:183
+msgid "The maximum number cannot be less than 2"
+msgstr "Максимальное число не может быть меньше 2"
+
+#: MainWindow.vala:188
+msgid "The number of attempts cannot be less than 1"
+msgstr "Количество попыток не может быть меньше 1"
+
+#: MainWindow.vala:195
+msgid "Guessed number from 1 to "
+msgstr "Загадано число от 1 до "
+
+#: MainWindow.vala:195
+msgid ". Guess it in "
+msgstr ". Угадайте его за "
+
+#: MainWindow.vala:195
+msgid " tries."
+msgstr " попыток(ки)."
+
+#: MainWindow.vala:205
+msgid "Is it number "
+msgstr "Это число "
+
+#: MainWindow.vala:206
+msgid "You guessed a number from 1 to "
+msgstr "Вы загадали число от 1 до "
+
+#: MainWindow.vala:206
+msgid ". The program will try to guess it in "
+msgstr ". Программа попытается угадать его за "
+
+#: MainWindow.vala:206
+msgid " attempts."
+msgstr " попыток(ки)."
+
+#: MainWindow.vala:207 MainWindow.vala:271 MainWindow.vala:327
+msgid "Attempt No. "
+msgstr "Попытка № "
+
+#: MainWindow.vala:207 MainWindow.vala:327
+msgid ". Remaining tries: "
+msgstr ". Осталось попыток: "
+
+#: MainWindow.vala:222
+msgid "Question"
+msgstr "Вопрос"
+
+#: MainWindow.vala:222
+msgid "Come back?\n"
+"The game will be reset."
+msgstr "Вернуться назад?\n"
+"Игра будет сброшена."
+
+#: MainWindow.vala:223
+msgid "Cancel"
+msgstr "Отмена"
+
+#: MainWindow.vala:224
+msgid "Come back"
+msgstr "Вернуться назад"
+
+#: MainWindow.vala:266
+msgid "Enter your number"
+msgstr "Введите число"
+
+#: MainWindow.vala:271
+msgid ". You have attempts left: "
+msgstr ". У вас осталось попыток: "
+
+#: MainWindow.vala:278
+msgid "My number is greater!"
+msgstr "Мое число больше!"
+
+#: MainWindow.vala:281
+msgid "My number is less!"
+msgstr "Мое число меньше!"
+
+#: MainWindow.vala:291
+msgid "Trying is over! It was number "
+msgstr "Попытки закончились! Это было число "
+
+#: MainWindow.vala:319
+msgid "You guessed the number "
+msgstr "Вы загадали число "
+
+#: MainWindow.vala:329
+msgid "Trying is over!"
+msgstr "Попытки закончились!"
+
+#: MainWindow.vala:371
+msgid "Message"
+msgstr "Сообщение"
+

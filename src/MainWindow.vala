@@ -57,8 +57,8 @@ namespace Guessnumber {
         set_titlebar(headerbar);
         button_back = new Button ();
         button_back.get_style_context().add_class("back-button");
-        button_back.label = "Back";
-        button_back.set_tooltip_text("To the start page");
+        button_back.label = _("Back");
+        button_back.set_tooltip_text(_("To the start page"));
         headerbar.add(button_back);
         button_back.clicked.connect (go_to_back);
 
@@ -68,7 +68,7 @@ namespace Guessnumber {
         stack.set_transition_duration (600);
         stack.set_transition_type (StackTransitionType.SLIDE_LEFT_RIGHT);
         add (stack);
-        var label_welcome = new Label ("Welcome to the game!");
+        var label_welcome = new Label (_("Welcome to the game!"));
         entry_diapasone = new Entry();
         entry_diapasone.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "edit-clear-symbolic");
         entry_diapasone.icon_press.connect ((pos, event) => {
@@ -77,7 +77,7 @@ namespace Guessnumber {
             entry_diapasone.grab_focus();
            }
         });
-        var label_diapasone = new Label.with_mnemonic ("_Numbers from 1 to");
+        var label_diapasone = new Label.with_mnemonic (_("_Numbers from 1 to"));
         var hbox_diapasone = new Box (Orientation.HORIZONTAL, 20);
         hbox_diapasone.pack_start (label_diapasone, false, true, 0);
         hbox_diapasone.pack_start (this.entry_diapasone, true, true, 0);
@@ -89,14 +89,14 @@ namespace Guessnumber {
               entry_attempts.grab_focus();
            }
         });
-        var label_attempt = new Label.with_mnemonic ("_Number of attempts:");
+        var label_attempt = new Label.with_mnemonic (_("_Number of attempts:"));
         var hbox_attempt = new Box (Orientation.HORIZONTAL, 20);
         hbox_attempt.pack_start (label_attempt, false, true, 0);
         hbox_attempt.pack_start (this.entry_attempts, true, true, 0);
 
-        var button_start_game_1 = new Button.with_label("You guess");
+        var button_start_game_1 = new Button.with_label(_("You guess"));
         button_start_game_1.clicked.connect(start_game_1);
-        var button_start_game_2 = new Button.with_label("The program guesses");
+        var button_start_game_2 = new Button.with_label(_("The program guesses"));
         button_start_game_2.clicked.connect(start_game_2);
         
         vbox_start_game = new Box(Orientation.VERTICAL,20);
@@ -115,12 +115,12 @@ namespace Guessnumber {
             entry_user_number.set_text ("");
            }
         });
-        var label_user_number = new Label.with_mnemonic ("_Your number:");
+        var label_user_number = new Label.with_mnemonic (_("_Your number:"));
         var hbox_user_number = new Box (Orientation.HORIZONTAL, 20);
         hbox_user_number.pack_start (label_user_number, false, true, 0);
         hbox_user_number.pack_start (this.entry_user_number, true, true, 0);
 
-        button_check = new Button.with_label("CHECK");
+        button_check = new Button.with_label(_("CHECK"));
         button_check.clicked.connect(check_number);
 
         attempts = new Label("");
@@ -141,13 +141,13 @@ namespace Guessnumber {
         number = new Label("");
         number.get_style_context().add_class("show_number");
         attempt = new Label("");
-        button_greater = new Button.with_label("My number is greater");
+        button_greater = new Button.with_label(_("My number is greater"));
         button_greater.get_style_context().add_class("destructive-action");
         button_greater.clicked.connect(greater);
-        button_less = new Button.with_label("My number is less");
+        button_less = new Button.with_label(_("My number is less"));
         button_less.get_style_context().add_class("destructive-action");
         button_less.clicked.connect(less);
-        button_guessed = new Button.with_label("Guessed!");
+        button_guessed = new Button.with_label(_("Guessed!"));
         button_guessed.get_style_context().add_class("suggested-action");
         button_guessed.clicked.connect(guessed);
         vbox_game_2 = new Box(Orientation.VERTICAL,20);
@@ -168,31 +168,31 @@ namespace Guessnumber {
 
    private void start_game(int n){
        if(is_empty(entry_diapasone.get_text())){
-           alert("Enter the maximum number of guesses");
+           alert(_("Enter the maximum number of guesses"));
            entry_diapasone.grab_focus();
            return;
        }
        if(is_empty(entry_attempts.get_text())){
-           alert("Enter the number of attempts");
+           alert(_("Enter the number of attempts"));
            entry_attempts.grab_focus();
            return;
        }
        int diapasone = int.parse(entry_diapasone.get_text());
        attempt_number = int.parse(entry_attempts.get_text());
        if(diapasone < 2){
-           alert("The maximum number cannot be less than 2");
+           alert(_("The maximum number cannot be less than 2"));
            entry_diapasone.grab_focus();
            return;
        }
        if(attempt_number < 1){
-           alert("The number of attempts cannot be less than 1");
+           alert(_("The number of attempts cannot be less than 1"));
            entry_attempts.grab_focus();
            return;
        }
            switch (n) {
                case 1:
                    guess_number = Random.int_range(1,diapasone + 1);
-                   label_info.set_text("Guessed number from 1 to "+diapasone.to_string()+". Guess it in "+attempt_number.to_string()+" tries.");
+                   label_info.set_text(_("Guessed number from 1 to ")+diapasone.to_string()+_(". Guess it in ")+attempt_number.to_string()+_(" tries."));
                    stack.visible_child = vbox_game_1;
                    set_widget_visible(button_back, true);
                    button_check.set_sensitive(true);
@@ -202,9 +202,9 @@ namespace Guessnumber {
                    min = 1;
                    max = diapasone;
                    middle = max/2;
-                   number.set_text("Is it number "+middle.to_string()+"?");
-                   info.set_text("You guessed a number from 1 to "+max.to_string()+". The program will try to guess it in "+attempt_number.to_string()+" attempts.");
-                   attempt.set_text("Attempt No. "+attempt_count.to_string()+". Remaining tries: "+(attempt_number - attempt_count).to_string());
+                   number.set_text(_("Is it number ")+middle.to_string()+"?");
+                   info.set_text(_("You guessed a number from 1 to ")+max.to_string()+_(". The program will try to guess it in ")+attempt_number.to_string()+_(" attempts."));
+                   attempt.set_text(_("Attempt No. ")+attempt_count.to_string()+_(". Remaining tries: ")+(attempt_number - attempt_count).to_string());
                    stack.visible_child = vbox_game_2;
                    set_widget_visible(button_back, true);
                    button_greater.set_sensitive(true);
@@ -219,9 +219,9 @@ namespace Guessnumber {
           reset_game();
           return;
       }
-      var dialog_back = new Granite.MessageDialog.with_image_from_icon_name ("Question", "Come back?\nThe game will be reset.", "dialog-question", Gtk.ButtonsType.NONE);
-           dialog_back.add_button ("Cancel", 0);
-           dialog_back.add_button ("Come back", 1);
+      var dialog_back = new Granite.MessageDialog.with_image_from_icon_name (_("Question"), _("Come back?\nThe game will be reset."), "dialog-question", Gtk.ButtonsType.NONE);
+           dialog_back.add_button (_("Cancel"), 0);
+           dialog_back.add_button (_("Come back"), 1);
            dialog_back.show_all ();
            int res = dialog_back.run ();
            switch (res) {
@@ -263,32 +263,32 @@ namespace Guessnumber {
    }
    private void check_number(){
        if(is_empty(entry_user_number.get_text())){
-           alert("Enter your number");
+           alert(_("Enter your number"));
            entry_user_number.grab_focus();
            return;
        }
        attempt_count++;
-       attempts.set_text("Attempt No. "+attempt_count.to_string()+". You have attempts left: "+(attempt_number - attempt_count).to_string());
+       attempts.set_text(_("Attempt No. ")+attempt_count.to_string()+_(". You have attempts left: ")+(attempt_number - attempt_count).to_string());
        int user_number = int.parse(entry_user_number.get_text());
        user_numbers = user_numbers + user_number.to_string()+"  ";
        numbers.set_text(user_numbers);
        entry_user_number.set_text("");
        entry_user_number.grab_focus();
        if(guess_number > user_number){
-           result.set_text("My number is greater!");
+           result.set_text(_("My number is greater!"));
            result.get_style_context().add_class("not_guessed");
        }else if(guess_number < user_number){
-           result.set_text("My number is less!");
+           result.set_text(_("My number is less!"));
            result.get_style_context().add_class("not_guessed");
        }else{
-           result.set_text("Guessed!");
+           result.set_text(_("Guessed!"));
            result.get_style_context().remove_class("not_guessed");
            result.get_style_context().add_class("guessed");
            button_check.set_sensitive(false);
            return;
        }
        if(attempt_count == attempt_number){
-           attempts.set_text("Trying is over! It was number "+guess_number.to_string());
+           attempts.set_text(_("Trying is over! It was number ")+guess_number.to_string());
            attempts.get_style_context().add_class("trying_over");
            button_check.set_sensitive(false);
        }
@@ -316,7 +316,7 @@ namespace Guessnumber {
    }
    private void check_game(){
        if (min == max){
-           number.set_text("You guessed the number "+min.to_string());
+           number.set_text(_("You guessed the number ")+min.to_string());
            button_greater.set_sensitive(false);
            button_less.set_sensitive(false);
            button_guessed.set_sensitive(false);
@@ -324,9 +324,9 @@ namespace Guessnumber {
        }
        attempt_count++;
        number.set_text(middle.to_string()+"?");
-      attempt.set_text("Attempt No. "+attempt_count.to_string()+". Remaining tries: "+(attempt_number - attempt_count).to_string());
+      attempt.set_text(_("Attempt No. ")+attempt_count.to_string()+_(". Remaining tries: ")+(attempt_number - attempt_count).to_string());
       if(attempt_count > attempt_number){
-        attempt.set_text("Trying is over!");
+        attempt.set_text(_("Trying is over!"));
         number.set_text("");
         attempt.get_style_context().add_class("trying_over");
         button_greater.set_sensitive(false);
@@ -368,7 +368,7 @@ namespace Guessnumber {
         }
 
      private void alert (string str){
-           var dialog = new Granite.MessageDialog.with_image_from_icon_name ("Message", str, "dialog-warning");
+           var dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Message"), str, "dialog-warning");
                dialog.show_all ();
                dialog.run ();
                dialog.destroy ();
