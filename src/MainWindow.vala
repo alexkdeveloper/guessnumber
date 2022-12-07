@@ -340,7 +340,7 @@ namespace Guessnumber {
             case Gdk.Key.space:
             case Gdk.Key.KP_Enter:
                 if (e.state != 0) {
-                    if (stack.get_visible_child()==vbox_game_1){
+                    if (stack.get_visible_child()==vbox_game_1&&button_check.get_sensitive()){
                         check_number();
                     }
                 }
